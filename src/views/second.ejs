@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container{
+            /* height: 400px; */
+            background-color: rgb(224, 237, 238);
+        }
+        .align{
+            text-align: center;
+        }
+        .box{
+            background-color: white;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .dis{
+            display: flex;
+            justify-content: space-around;
+        }
+        .checked {
+  color: orange;
+}
+.img{
+    text-align: center;
+    padding-top: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="align">
+ <p>SHOP ONLINE</p>
+ <h1>Books BestSeller</h1></div>
+ <div class="dis" > 
+     <!-- firstbox -->
+     <%for(let i=0;i<details.length;i++){%>
+ <div><div class="box"><div class="img"><a href="/singleview/<%=i%>"><img src="<%=details[i].img%>"class="img-fluid"></a>
+</div></div><p>item,simple,smart</p><h4><%=details[i].title%></h4>
+<%for(let str=0;str<details[i].star;str++){%>
+ <span class="fa fa-star checked"></span> <%}%>
+ <!-- <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span> --> 
+ <p><%=details[i].rate%></p>
+</div><%}%>
+ 
+ <!--  -->
+ <!-- <div><div class="box"><div class="img"><img src="/images/fool.jfif"></div></div><p>item,simple,smart</p><h4>Everybody's Fool</h4>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <p><del>$99.00</del> &nbsp;$89.00</p></div>
+
+  <div><div class="box"><div class="img"><img src="/images/cookbook.jfif"></div></div><p>item,simple,smart</p><h4>The Designers Cookbook</h4>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star"></span>
+ <p>$119.00</p></div> -->
+ <!--  -->
+ <!-- <div><div class="box"><div class="img"><img src="/images/naked.jpg"></div></div><p>item,simple,smart</p><h4>The Nacked CookBook</h4>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <span class="fa fa-star checked"></span>
+ <p>$79.00</p></div>
+    </div> --> 
+</div>
+</body>
+</html>
